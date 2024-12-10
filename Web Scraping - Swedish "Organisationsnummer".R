@@ -5,7 +5,7 @@ searchname <- paste0(websearch,
 for (x in 1:length(firm_list) { # Loop the scraping script over the number of firms in the firm_list.
   message("Retrieving OrgNr ", x, ".") # This line give the user information on how far the code has come in terms of collected "organisationsnummer".
   tmp_doc <- read_html(searchname[x]) # Create a temporary variable called "tmp_doc".
-  tmp_html_prod <- tmp_doc %>% # This part makes use of dplyr and it retrieves the "span" element of the html information saved in tmp_doc and then it collects the text from the new temporay file "tmp_html_prod".
+  tmp_html_prod <- tmp_doc %>% # This part makes use of dplyr and it retrieves the "span" element of the html information saved in tmp_doc and then it collects the text in the new temporay file "tmp_html_prod".
     html_elements("span") %>%
     html_text2()
   
