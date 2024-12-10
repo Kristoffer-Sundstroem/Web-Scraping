@@ -1,6 +1,6 @@
-# Web Scraping Project
+# Web Scraping
 ## Overview
-This project provides a framework for web scraping, demonstrating how to extract data from web pages using R. The code is intended for educational purposes only.
+This repository provides examples of web scraping solutions, demonstrating how to extract data from web pages using R. The code is intended for educational purposes only.
 
 ## Important Notice
 **Please read this section carefully before using the code**
