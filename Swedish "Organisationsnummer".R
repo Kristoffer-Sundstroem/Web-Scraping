@@ -1,6 +1,7 @@
 websearch <- "https://www.allabolag.se/bransch-s%C3%B6k?q=" # Specify the https that is used for the websearch (in this case allabolag.se).
 searchname <- paste0(websearch,
                      URLencode(firm_list)) # Create a list that is a combination of the websearch and the URLencoded firm names (taken from firm_list).
+Data <- data.frame(length(firm_list)) # Create a dataframe with the same length as firm_list. We will later use this to store the "Organisationsnummer".
 
 for (x in 1:length(firm_list) { # Loop the scraping script over the number of firms in the firm_list.
   message("Retrieving OrgNr ", x, ".") # This line give the user information on how far the code has come in terms of collected "organisationsnummer".
@@ -11,10 +12,10 @@ for (x in 1:length(firm_list) { # Loop the scraping script over the number of fi
   
   tmp_nr <- grep("Org.nr[0-9]", tmp_html_prod) # This retrieves the organisationsnummer from the tmp_html_prod and saves is as a temporary variable tmp_nr.
   
-  EnvDataSet_Tibble[x,] <- EnvDataSet_Tibble[x,]%>% 
-    mutate(OrgNr = tmp_html_prod[tmp_nr[1]])
+  Data[x,] <- Data[x,]%>% 
+    mutate(OrgNr = tmp_html_prod[tmp_nr[1]]) # Save the retrieved "Organisationsnummer in the dataframe as "OrgNr".
   
-  rm(tmp_doc, tmp_html_prod, tmp_nr)
+  rm(tmp_doc, tmp_html_prod, tmp_nr) # Remove all temporary variables.
   
   if((x %% 100) == 0) { # This part specifies that this specific part (uner the if command) shall run after the loop has reached the 100th iteration.
     message("Taking a break.") # Gives the user information about the fact that the scraping script is taking a break.
