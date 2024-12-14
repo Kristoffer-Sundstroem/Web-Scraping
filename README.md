@@ -3,7 +3,7 @@
 This repository provides examples of web scraping solutions, demonstrating how to extract data from web pages using R. The code is intended for educational purposes only.
 
 ## Important Notice
-**Please read this section carefully before using the code**
+**Please read this section carefully before using the code!**
 
 ### Terms and Conditions
 Web scraping is subject to the terms and conditions of each website. Many websites prohibit scraping in their terms of service, and violating these terms can result in legal consequences. Therefore, it is crucial to:
