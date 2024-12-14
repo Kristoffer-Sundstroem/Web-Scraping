@@ -13,5 +13,3 @@ Web scraping is subject to the terms and conditions of each website. Many websit
 3. Use Responsibly: Avoid overloading the website's server with too many requests in a short period. Implement rate limiting and handle requests responsibly.
 ### Disclaimer
 The code provided in this repository is for educational purposes only. The authors are not responsible for any misuse of the code. Users must ensure they have the right to scrape the data and comply with all legal requirements.
-
-## Getting Started
