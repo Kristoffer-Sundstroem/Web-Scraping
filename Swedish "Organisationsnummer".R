@@ -24,4 +24,4 @@ for (x in 1:length(firm_list) { # Loop the scraping script over the number of fi
   }
 }
 
-# EnvDataSet_Tibble$OrgNr <- sub("^\\D+", "", EnvDataSet_Tibble$OrgNr)
+Data$OrgNr <- sub("^\\D+", "", Data$OrgNr) # This code is optional and is used to remove the string of text that is before the "organisationsnummer". So if the goal is pure "organisationsnummer" then one should run this part as well.
